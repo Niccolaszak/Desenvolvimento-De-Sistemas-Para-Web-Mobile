@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de Elementos em HTML</title>
+</head>
+<body>
+    <!--Titulo Principal-->
+    <h1>Exemplo de Elementos HTML</h1>
+    <!--Titulo Secundário-->
+    <h2>Elementos Muiltimidias</h2>
+    <!--Imagem URL-->
+    <h2>Imagens</h2>
+    <p>Imagem via URL:</p>
+    <img src="https://images.pexels.com/photos/17784701/pexels-photo-17784701.jpeg?cs=srgb&dl=pexels-pramodtiwari-17784701.jpg&fm=jpg" alt="Imagem de um Computador" width="300">
+    <!--Imagem Local-->
+    <p>Imagem local:</p>
+    <img src="download.jpeg" alt="Imagem de um Computador" width="300">
+    <!-- Vídeo Incorporar -->
+    <h2>Vídeos</h2>
+    <p>Via incorporar no YouTube:</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/SslHvtFhJ-Q?si=QLS0xuMmTJ-_wHRC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!-- Video Local -->
+    <p>Vídeo local</p>
+    <video controls>
+        <source src="video.mp4" type="video/mp4">
+    </video>
+    <!-- Audio -->
+     <h2>Audios</h2>
+     <audio controls>
+        <source src="eopix.mp3" type="audio/mp3">
+     </audio>
+     <!-- Tabelas -->
+      <h2>Tabelas</h2>
+      <table border="1" style="background-color: blanchedalmond;">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Profissão</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>João</td>
+                <td>25</td>
+                <td>Programador</td>
+            </tr>
+            <tr>
+                <td>Maria</td>
+                <td>30</td>
+                <td>Analista de Sistemas</td>
+            </tr>
+        </tbody>
+      </table>
+    <!-- Formulario -->
+    <h2>Formulários</h2>
+    <form>
+        <p>Insira Seu Nome</p>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome">
+
+        <p>Insira Sua Senha</p>
+        <label for="Senha">Senha:</label>
+        <input type="password" id="senha">
+
+        <p>Notificações</p>
+        <label>
+            <input type="checkbox" name="Notificação" value="email">Receber notificações por e-mail
+        </label>
+
+        <p>Selecione seu Gênero</p>
+        <label>
+            <input type="radio" name="genero" value="masculino">Masculino
+            <input type="radio" name="genero" value="feminino">Feminino
+        </label>
+
+    <H2>Botão</H2>
+    <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
