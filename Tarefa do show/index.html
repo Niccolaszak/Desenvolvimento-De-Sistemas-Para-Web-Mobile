@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icone.ico" type="image/x-icon">
+    <title>Evento Musical</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: #353b3b;
+            font-family: Arial, sans-serif;
+            margin: 5px;
+            padding: 5px;
+            color: orange
+        }
+        img{
+            width: 30%;
+            height: auto;
+            border-radius: 10px;
+            border: orange 5px solid;
+        }
+        video{
+            width: 30%;
+            height: auto;
+            border-radius: 10px;
+            border: orange 5px solid;
+        }
+        #audio{
+            text-align: center;
+        }
+        #dados{
+            text-align: center;
+        }
+        th{
+            background-color: rgb(29, 24, 99);
+        }
+        table{
+            width: 80%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <section>
+    <div>
+    <h1>Imagem do Evento:</h1>
+    <img src="images.jpg" alt="imagem">
+    </div>
+    <h1>Video de Divulgação:</h1>
+    <div id = "video">
+        <video controls>
+            <source src="video.mp4" type="video/mp4">
+        </video>
+    </div>
+    <h1>Trecho da atração principal do evento:</h1>
+    <div id ="audio">
+        <audio controls>
+            <source src="musica.mp3" type="audio/mp3">
+        </audio>
+    </div>
+    <h1>Horário de Shows</h1>
+    <table border="1" style = "border-color: white;" align="center">
+        <thead>
+            <tr>
+                <th>Horário</th>
+                <th>Local</th>
+                <th>Palco</th>
+                <th>atração</th>
+            </tr>
+        <tbody>
+            <tr>
+                <td>19:00</td>
+                <td>Parque Agradável</td>
+                <td>Principal</td>
+                <td>Marshmellow</td>
+            </tr>
+            <tr>
+                <td>21:00</td>
+                <td>Torres Tortas</td>
+                <td>Palco 2</td>
+                <td>Marshmellow</td>
+            </tr>
+            <tr>
+                <td>23:00</td>
+                <td>Via do Varejo</td>
+                <td>Palco 1</td>
+                <td>Marshmellow</td>
+            </tr>
+        </tbody> 
+        </thead>
+    </table>
+    <div id="dados">
+    <h1>Dados para o ingresso:</h1>
+    <h4 style="line-height: 1px;">Insira seu nome:</h4>
+    <input type="text" name="nome" id="nome" placeholder="Nome"><br>
+    <h4 style="line-height: 1px;">Insira seu Email:</h4>
+    <input type="text" name="email" id="email" placeholder="Email"><br>
+    <h4 style="line-height: 1px;">Insira seu Telefone:</h4>
+    <input type="text" name="tel" id="tel" placeholder="Telefone"><br>
+    <h3>Tipo de ingresso</h3>
+    <form>
+        <input type="radio" name="tipo" id="tipo" value="vip">Pista
+        <input type="radio" name="tipo" id="tipo" value="normal">VIP
+        <input type="radio" name="tipo" id="tipo" value="meia">Camarote<br><br>
+        <input type="submit" value="Comprar">
+    </form>
+</div>
+</section>
+</body>
+</html>
