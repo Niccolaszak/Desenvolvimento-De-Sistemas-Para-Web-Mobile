@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de CSS</title>
+
+    <!-- CSS Externo -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS Interno -->
+    <style>
+        body{
+            font-family: cursive;
+            background-color: #a4bdbd;
+            margin: 20px;
+            padding: 20px;
+        }
+        
+        h1{
+            color: blue;
+            text-align: center;
+        }
+
+        .destaque{
+            color: green;
+            font-size: 18px;
+            border: 2px dashed red;
+            padding: 10px;
+        }
+
+        #especial{
+            background: yellow;
+            margin: 20px;
+            padding: 15px;
+            border: 2px solid black;
+        }
+
+    </style>
+
+
+
+</head>
+<body>
+
+    <h1>Exemplo de CSS Interno, Externo e Inline</h1>
+
+    <!-- CSS Inline -->
+     <p style="color: red; font-size: 20px;">Este é um parágrafo com CSS Inline</p>
+
+    <!-- UTILIZANDO A CLASSE -->
+     <p class="destaque">Este paragráfo utiliza uma classe</p>
+     
+    <!-- UTILIZANDO O ID -->
+     <div id="especial">
+        Este é um bloco com um ID especifico
+     </div>
+
+    <!-- UTILIZANDO CLASSE EXTERNA -->
+     <div class="externo">
+        Este é um bloco com CSS Externo
+     </div>
+     
+
+</body>
+</html>
