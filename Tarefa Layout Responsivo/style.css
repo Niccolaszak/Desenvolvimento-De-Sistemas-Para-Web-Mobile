@@ -12,7 +12,7 @@ body {
 .site-header {
     background-color:#ad3d0d; /* Cor de fundo */
     color: #fff; /* Cor do texto */
-    padding: 20px; /* Espaçamento interno */
+    padding: 10px; /* Espaçamento interno */
     text-align: center; /* Centraliza o texto */
     width: auto; /* Faz o cabeçalho ocupar toda a largura */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
@@ -56,9 +56,8 @@ body {
     box-shadow: 0px 0px 10px 0px black;
     position: relative; /* Define a posição relativa para isolar o conteúdo */
     overflow: hidden; /* Garante que o conteúdo extra não afete o layout */
-    transition: transform 0.5s ease; /* Transição suave para o efeito de escala */
-    max-height: 280px; /* Altura inicial 0 para ocultar */
-    transition: max-height 1s ease; /* Transição suave para a altura */
+    max-height: 278px; /* Altura inicial 0 para ocultar */
+    transition: max-height 0.75s ease; /* Transição suave para a altura */
     text-wrap: wrap;
     max-width: 400px;
     min-width: 350px
@@ -66,8 +65,18 @@ body {
 .cart:hover {
     transform: scale(1.05); /* Aplica o efeito de escala apenas na div atual */
     max-height: 1000px;
+    background-color: #ad3d0d;
+    transition: max-height 1.5s ease;
 }
 
+.site-header:hover>h1::after{
+    content: "😋";
+    font-size: 24px;
+}
+.site-header:hover>h1::before{
+    content: "😋";
+    font-size: 24px;
+}
 .cart > h2{
     text-align: center;
 }
@@ -99,4 +108,87 @@ img{
         margin: 0px;
         padding: 0px;
     }
+}
+
+/*Estilização dos titulos com emojis*/
+
+.cart:nth-child(1):hover>h2::after{
+    content: "🍰🥕";
+    font-size: 16px;
+}
+.cart:nth-child(1):hover>h2::before{
+    content: "🥕🍰";
+    font-size: 16px;
+}
+
+.cart:nth-child(2):hover>h2::after{
+    content: "🎂🍫";
+    font-size: 16px;
+}
+.cart:nth-child(2):hover>h2::before{
+    content: "🍫🎂";
+    font-size: 16px;
+}
+
+.cart:nth-child(3):hover>h2::after{
+    content: "🍞🧀";
+    font-size: 16px;
+}
+.cart:nth-child(3):hover>h2::before{
+    content: "🧀🍞";
+    font-size: 16px;
+}
+
+.cart:nth-child(4):hover>h2::after{
+    content: "🍎🥧";
+    font-size: 16px;
+}
+.cart:nth-child(4):hover>h2::before{
+    content: "🥧🍎";
+    font-size: 16px;
+}
+
+.cart:nth-child(5):hover>h2::after{
+    content: "🍨🍫";
+    font-size: 16px;
+}
+.cart:nth-child(5):hover>h2::before{
+    content: "🍫🍨";
+    font-size: 16px;
+}
+
+.cart:nth-child(6):hover>h2::after{
+    content: "🍋🍮";
+    font-size: 14px;
+}
+.cart:nth-child(6):hover>h2::before{
+    content: "🍮🍋";
+    font-size: 14px;
+}
+
+.cart:nth-child(7):hover>h2::after{
+    content: "🍌🍰";
+    font-size: 16px;
+}
+.cart:nth-child(7):hover>h2::before{
+    content: "🍰🍌";
+    font-size: 16px;
+}
+
+.cart:nth-child(8):hover>h2::after{
+    content: "🍗♟️";
+    font-size: 16px;
+}
+.cart:nth-child(8):hover>h2::before{
+    content: "♟️🍗";
+    font-size: 16px;
+}
+
+.cart:nth-child(9):hover>h2::after{
+    content: "🥗🍅";
+    font-size: 16px;
+}
+.cart:nth-child(9):hover>h2::before{
+    content: "🍅🥗";
+    font-size: 16px;
 }
