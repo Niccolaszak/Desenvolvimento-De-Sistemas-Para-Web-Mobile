@@ -1,16 +1,194 @@
-body{
-    background-color: #1e6e1c;
+body {
+    background-color: #E0B56F;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove espaçamentos padrão */
+    display: flex;
+    flex-direction: column; /* Garante que os elementos sejam empilhados verticalmente */
+    align-items: stretch; /* Faz os elementos ocuparem toda a largura */
+    min-height: 100vh; /* Garante que o body ocupe toda a altura da janela */
 }
 
-.container{
+.site-header {
+    background-color:#ad3d0d; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    padding: 10px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    width: auto; /* Faz o cabeçalho ocupar toda a largura */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
+    position: sticky; /* Fixa o cabeçalho no topo ao rolar */
+    top: 0; /* Garante que o cabeçalho fique no topo */
+    z-index: 100; /* fixa o cabeçalho ao rolar a pagina*/
+    border-bottom-right-radius: 20px; /*Arredonda os cantos de baixo do cabeçalho*/
+    border-bottom-left-radius: 20px;
+}
+.site-header:nth-child(1){
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+.site-footer{
+    background-color: #852700;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    /* fixar o rodapé embaixo da pagina */
+    position: relative;
+    bottom: 0;
+    border-top-right-radius: 20px; /*Arredonda os cantos de cima do rodape*/
+    border-top-left-radius: 20px;
+}
+.container {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr); /* Define 3 colunas de tamanhos iguais */
+    column-gap: 15px; /* Espaçamento entre os itens do grid */
+    row-gap: 0px;
+    padding: 20px; /* Adiciona espaçamento interno */
+    max-width: 1200px; /* Limita a largura máxima do grid */
+    margin: 0 auto; /* Centraliza o grid horizontalmente */
+    box-sizing: border-box; /* Inclui o padding no cálculo da largura */
 }
 .cart{
     box-sizing: border-box;
     border-radius: 8px;
     margin: 20px;
-    padding: 20px;
-    background-color: #d4b735;
+    padding: 10px 20px;
+    background-color: #BD6347;
     box-shadow: 0px 0px 10px 0px black;
+    position: relative; /* Define a posição relativa para isolar o conteúdo */
+    overflow: hidden; /* Garante que o conteúdo extra não afete o layout */
+    max-height: 278px; /* Altura inicial 0 para ocultar */
+    transition: max-height 0.75s ease; /* Transição suave para a altura */
+    text-wrap: wrap;
+    max-width: 400px;
+    min-width: 350px
+}
+.cart:hover {
+    transform: scale(1.05); /* Aplica o efeito de escala apenas na div atual */
+    max-height: 1000px;
+    background-color: #ad3d0d;
+    transition: max-height 1.5s ease;
+}
+
+.site-header:hover>h1::after{
+    content: "😋";
+    font-size: 24px;
+}
+.site-header:hover>h1::before{
+    content: "😋";
+    font-size: 24px;
+}
+.cart > h2{
+    text-align: center;
+}
+.cart > nav{
+    text-align: center;
+}
+
+img{
+    max-width: 280px;
+    border-radius: 15px;
+}
+
+@media(max-width: 1204px){
+    .container{
+        grid-template-columns: repeat(2,1fr);
+        width: auto;
+    }
+}
+@media(max-width: 838px){
+    .container{
+        grid-template-columns: repeat(1,1fr);
+        width: auto;
+    }
+}
+@media(max-width: 400px){
+    .container{
+        grid-template-columns: repeat(1,1fr);
+        width: 0px;
+        margin: 0px;
+        padding: 0px;
+    }
+}
+
+/*Estilização dos titulos com emojis*/
+
+.cart:nth-child(1):hover>h2::after{
+    content: "🍰🥕";
+    font-size: 16px;
+}
+.cart:nth-child(1):hover>h2::before{
+    content: "🥕🍰";
+    font-size: 16px;
+}
+
+.cart:nth-child(2):hover>h2::after{
+    content: "🎂🍫";
+    font-size: 16px;
+}
+.cart:nth-child(2):hover>h2::before{
+    content: "🍫🎂";
+    font-size: 16px;
+}
+
+.cart:nth-child(3):hover>h2::after{
+    content: "🍞🧀";
+    font-size: 16px;
+}
+.cart:nth-child(3):hover>h2::before{
+    content: "🧀🍞";
+    font-size: 16px;
+}
+
+.cart:nth-child(4):hover>h2::after{
+    content: "🍎🥧";
+    font-size: 16px;
+}
+.cart:nth-child(4):hover>h2::before{
+    content: "🥧🍎";
+    font-size: 16px;
+}
+
+.cart:nth-child(5):hover>h2::after{
+    content: "🍨🍫";
+    font-size: 16px;
+}
+.cart:nth-child(5):hover>h2::before{
+    content: "🍫🍨";
+    font-size: 16px;
+}
+
+.cart:nth-child(6):hover>h2::after{
+    content: "🍋🍮";
+    font-size: 14px;
+}
+.cart:nth-child(6):hover>h2::before{
+    content: "🍮🍋";
+    font-size: 14px;
+}
+
+.cart:nth-child(7):hover>h2::after{
+    content: "🍌🍰";
+    font-size: 16px;
+}
+.cart:nth-child(7):hover>h2::before{
+    content: "🍰🍌";
+    font-size: 16px;
+}
+
+.cart:nth-child(8):hover>h2::after{
+    content: "🍗♟️";
+    font-size: 16px;
+}
+.cart:nth-child(8):hover>h2::before{
+    content: "♟️🍗";
+    font-size: 16px;
+}
+
+.cart:nth-child(9):hover>h2::after{
+    content: "🥗🍅";
+    font-size: 16px;
+}
+.cart:nth-child(9):hover>h2::before{
+    content: "🍅🥗";
+    font-size: 16px;
 }
