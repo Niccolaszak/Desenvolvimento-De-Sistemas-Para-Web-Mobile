@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musicas para todos - Spotify</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./assets/css/estilo.css">
+    <link rel="icon" href="./assets/imagens/favicon.png">
+
+    <style>
+        body {
+            background-color: #121212; /* Fundo escuro */
+            color: #e0e0e0; /* Texto claro */
+            padding-top: 80px; /* Compensa o cabeçalho fixo */
+            font-family: Arial, sans-serif; /* Fonte limpa e legível */
+            display: flex;
+            flex-direction: column; /* Empilha os elementos verticalmente */
+            min-height: 100vh; /* Garante que o body ocupe pelo menos a altura da tela */
+            margin: 0; /* Remove margens padrão */
+        }
+
+        #caixa {
+            background-color: #1e1e1e; /* Fundo escuro para o formulário */
+            border-radius: 15px; /* Cantos arredondados */
+            padding: 20px; /* Espaçamento interno */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra mais escura */
+            margin: 20px auto; /* Espaçamento externo padrão */
+            max-width: 350px; /* Largura máxima */
+            width: 90%; /* Responsivo para telas menores */
+            color: #e0e0e0; /* Texto claro */
+            flex-grow: 1; /* Faz o conteúdo crescer para ocupar o espaço disponível */
+        }
+
+        /* Ajuste para telas grandes */
+        @media (min-width: 992px) {
+            #caixa {
+                margin: 50px auto; /* Aumenta o espaçamento superior e inferior */
+            }
+        }
+
+        #caixa h4 {
+            font-size: 1.8rem; /* Tamanho maior para o título principal */
+            color: #1db954; /* Verde do Spotify para destaque */
+            margin-bottom: 20px; /* Espaçamento abaixo do título */
+            text-align: center; /* Centraliza o título */
+        }
+
+        form .form-group label {
+            color: #e0e0e0; /* Texto claro para os rótulos */
+        }
+
+        form .form-control {
+            background-color: #333; /* Fundo escuro para os campos de entrada */
+            color: #e0e0e0; /* Texto claro */
+            border: 1px solid #444; /* Borda sutil */
+            border-radius: 5px; /* Cantos arredondados */
+        }
+
+        form .form-control:focus {
+            background-color: #444; /* Fundo mais claro ao focar */
+            border-color: #1db954; /* Destaque verde ao focar */
+            color: #fff; /* Texto branco */
+        }
+
+        form button {
+            background-color: #1db954; /* Botão verde do Spotify */
+            color: #fff; /* Texto branco */
+            font-size: 1rem;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #14833b; /* Verde mais escuro ao passar o mouse */
+        }
+
+        footer {
+            background-color: #1e1e1e; /* Fundo escuro para o rodapé */
+            color: #e0e0e0; /* Texto claro */
+            padding: 20px 0;
+            width: 100%; /* Faz o rodapé ocupar toda a largura */
+            margin-top: auto; /* Empurra o rodapé para o final da página */
+        }
+
+        footer h4 {
+            color: #1db954; /* Verde do Spotify para os títulos */
+        }
+
+        footer a {
+            color: #e0e0e0; /* Links claros */
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #1db954; /* Destaque verde ao passar o mouse */
+        }
+
+        footer ul li {
+            list-style: none; /* Remove marcadores da lista */
+            margin-bottom: 10px;
+        }
+
+        footer ul li a img {
+            width: 24px; /* Tamanho dos ícones sociais */
+            margin-right: 10px;
+        }
+
+        .navbar {
+            height: 80px; /* Define a altura do cabeçalho */
+            line-height: 80px; /* Centraliza o conteúdo verticalmente */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-transparente">
+            <div class="container">
+                <a href="index.html" class="navbar-brand">
+                    <img src="assets/imagens/spotify.svg" width="142" alt="">
+                </a>
+
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
+                    <i class="fas fa-bars text-white"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="nav-principal">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="" class="nav-link">Premium</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Ajuda.html" class="nav-link">Ajuda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">Baixar</a>
+                        </li>
+                        <li class="nav-item divisor">
+                            <a href="" class="nav-link"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="inscreva.html" class="nav-link">Inscrever-se</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="entrar.html" class="nav-link">Entrar</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="caixa" class="d-flex">
+        <div class="container">
+            <h4><strong>ENTRAR</strong></h4>
+            <form action="" method="POST" style="max-width: 400px; margin: 0 auto;">
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail" required>
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha" required>
+                </div>
+                <button type="submit" class="btn btn-success btn-block">Entrar</button>
+            </form>
+            <p class="text-center mt-3">
+                Não tem uma conta? <a href="inscreva.html" class="text-success">Inscreva-se</a>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row ">
+                <div class="col-md-2">
+                    <img src="assets/imagens/spotify.svg" width="142">
+                    <br>
+                </div>
+                <div class="col-md-2">
+                    <h4>Company</h4>
+                    <ul class="navbar-nav">
+                        <li><a href="">Sobre</a></li>
+                        <li><a href="">Empregos</a></li>
+                        <li><a href="">Imprensa</a></li>
+                        <li><a href="">Novidades</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h4>Comunidades</h4>
+                    <ul class="navbar-nav">
+                        <li><a href="">Artistas</a></li>
+                        <li><a href="">Devs</a></li>
+                        <li><a href="">Marcas</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h4>Links úteis</h4>
+                    <ul class="navbar-nav">
+                        <li><a href="Ajuda.html">Ajuda</a></li>
+                        <li><a href="">Presentes</a></li>
+                        <li><a href="">Player da Web</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul>
+                        <li>
+                            <a href=""><img src="assets/imagens/facebook.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="assets/imagens/twitter.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="assets/imagens/instagram.png" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
