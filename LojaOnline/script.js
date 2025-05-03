@@ -1,3 +1,5 @@
+let tentativas = 0; // Variável para contar as tentativas
+
 function validar() {
     // Obtém os valores dos campos de entrada
     const usuario = document.getElementById('usuario').value;
@@ -9,11 +11,33 @@ function validar() {
         return;
     }
 
-    // validação simples
-    if (usuario === 'admin' && senha === '1234') {
-        alert('Login realizado com sucesso!');
+    // Verifica se o usuário excedeu o limite de tentativas
+    if (tentativas >= 3) {
+        alert(`Usuário ${usuario} foi bloqueado após 3 tentativas incorretas!`);
+        return;
+    }
+
+    // Validação simples
+    const usuarioCorreto = 'admin';
+    const senhaCorreta = '1234';
+
+    if (usuario !== usuarioCorreto) {
+        alert('Usuário incorreto! Tente novamente.');
+        return; // Não gasta tentativa se o usuário estiver errado
+    }
+
+    if (senha === senhaCorreta) {
+        alert(`Login realizado com sucesso! Bem-vindo, ${usuario}!`);
+        tentativas = 0; // Reseta as tentativas após login bem-sucedido
     } else {
-        alert('Usuário ou senha incorretos!');
+        tentativas++; // Incrementa o contador de tentativas apenas se o usuário estiver correto
+        const tentativasRestantes = 3 - tentativas;
+
+        if (tentativasRestantes > 0) {
+            alert(`Senha incorreta! Você tem mais ${tentativasRestantes} tentativa(s).`);
+        } else {
+            alert(`Usuário ${usuario} foi bloqueado após 3 tentativas incorretas!`);
+        }
     }
 }
 

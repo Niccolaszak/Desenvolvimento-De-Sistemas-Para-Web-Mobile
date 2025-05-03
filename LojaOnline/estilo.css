@@ -1,23 +1,17 @@
 body {
     background: rgb(35, 35, 119); /* Fundo escuro */
-    font: normal 16pt Arial, sans-serif; /* Fonte padr */
-    color: white; /* Texto claro */
+    font: normal 16pt Arial, sans-serif; /* Fonte padrão*/
     margin: 0; /* Remove margens padrão */
-    display: flex;
-    flex-direction: column;
+    display: flex; /* Flexbox para layout responsivo */
+    flex-direction: column; /* Coloca os elementos em coluna */
     min-height: 100vh; /* Garante que o body ocupe toda a altura da tela */
-}
-
-header {
-    text-align: center;
-    margin: 20px 0; /* Espaçamento superior e inferior */
 }
 
 section {
     background: whitesmoke; /* Fundo claro para contraste */
     border-radius: 10px; /* Cantos arredondados */
     padding: 20px; /* Espaçamento interno */
-    width: 100%;
+    width: 100%; /* Largura total do contêiner */
     max-width: 400px; /* Limita a largura máxima */
     margin: auto; /* Centraliza horizontalmente */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
@@ -67,8 +61,8 @@ section input[type="button"]:hover {
 }
 
 footer {
-    text-align: center;
-    font-style: italic;
+    text-align: center; /* Centraliza o texto do rodapé */
+    font-style: italic; /* Estilo itálico */
     margin-top: auto; /* Empurra o rodapé para o final da página */
     padding: 10px 0; /* Espaçamento interno */
     background: rgb(25, 25, 100); /* Fundo mais escuro */
@@ -76,13 +70,13 @@ footer {
 }
 
 #login {
-    text-align: center;
-    font-size: 20px;
-    color: black;
-    background: whitesmoke;
-    border-radius: 10px;
-    padding: 10px;
-    width: 500px;
-    margin: auto;
-    box-shadow: 5px 5px 10px black;
+    text-align: center; /* Centraliza o texto */
+    font-size: 20px; /* Tamanho do texto */
+    color: black; /* Texto escuro */
+    background: whitesmoke; /* Fundo claro */
+    border-radius: 10px; /* Cantos arredondados */
+    padding: 10px; /* Espaçamento interno */
+    width: 500px; /* Largura fixa */
+    margin: auto; /* Centraliza horizontalmente */
+    box-shadow: 5px 5px 10px black; /* Sombra suave */
 }
