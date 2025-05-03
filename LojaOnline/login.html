@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <section id = 'login'>
+        <h2>Faça seu login</h2>
+        <div id = 'dados'>
+            <p>Usuário</p>
+            <input type="text" name = 'usuario' id = 'usuario'>
+            <p>Senha</p>
+            <input type="password" name = 'senha' id = 'senha'>
+            <p>
+                <input type="checkbox" id="mostrarSenha" onclick="mostrarOcultarSenha()"> Mostrar senha
+            </p>
+            <p><input type="button" value="Entrar" onclick = "validar()"></p>
+    </section>
+    <footer>
+        <p>&copy; Nicolaszak</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
