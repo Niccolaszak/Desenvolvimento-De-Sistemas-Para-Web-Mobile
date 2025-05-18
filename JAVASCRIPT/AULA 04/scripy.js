@@ -67,7 +67,24 @@ console.log("Maior item da lista numeros: "+ maiorNumero(numeros))
 
 //8- Crie uma função que receba um array de nomes e retorne uma string com todos os nomes
 //separados por vírgula.
-function separados(lista){
-    
+function nomesSeparadosPorVirgula(lista){
+    return lista.join(", ") // join() transforma o array em string
 }
-console.log(separados(palavras))
+let nomes = ["alisson","bia","caio","daniel","eduardo"]
+console.log("Nomes separados por vírgula: " + nomesSeparadosPorVirgula(nomes))
+
+//9- Crie uma função que receba um array e retorne um novo array com os elementos em
+//ordem reversa.
+function ordemReversa(lista){
+    return lista.reverse()
+}
+let listaReversa = [1,2,3,4,5]
+console.log("Lista em ordem reversa: " + ordemReversa(listaReversa))
+
+//10- Crie uma função que receba um array de números e retorne um novo array com os
+//quadrados desses números.
+function quadrados(lista){
+    return lista.map(item => item * item)
+}
+let numeros2 = [1,2,3,4,5]
+console.log("Lista com os quadrados dos números: " + quadrados(numeros2))
