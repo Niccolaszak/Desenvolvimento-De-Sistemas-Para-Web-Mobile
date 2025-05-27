@@ -16,15 +16,14 @@ const entregas={
     }
 }
 
-let contador = 1
+let contador = 0
 let intervalo = setInterval(()=>{
     contador++
-    console.log(`Repetição número ${contador}`)
-    console.log(buscarDadosEntrega(entregas.contador))
+    console.log(buscarDadosEntrega(entregas[contador]))
     if (contador === 3){
         clearInterval(intervalo)
     }
-},1000)
+},2000)
 
 
 function buscarDadosEntrega(entrega){
@@ -41,10 +40,19 @@ function buscarDadosEntrega(entrega){
 }
 
 setTimeout(()=>{
-    entregas.entrega1.status = "Entregue"
-    entregas.entrega3.status = "Entregue"
-},10000)
+    entregas[1].status = "Entregue"
+    entregas[3].status = "Entregue"
+},5000)
 
-
+setTimeout(()=>{
+    let contador = 0
+    let intervalo = setInterval(()=>{
+    contador++
+    console.log(buscarDadosEntrega(entregas[contador]))
+    if (contador === 3){
+        clearInterval(intervalo)
+    }
+},2000)
+},6000)
 
 
